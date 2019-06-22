@@ -428,8 +428,42 @@ And there are a cuple of packages implementing certen encodings, like:
 > Package cmplx provides basic constants and mathematical functions for 
 > complex numbers.
 
-<iframe src="https://play.golang.org/p/YZKVVpJEPIC">Go playground</iframe>
+Example Polar returns absolute vale r and phase θ of x
+```go
+    r, theta := cmplx.Polar(2i)
+    fmt.Printf("r: %.1f, θ: %.1f*π", r, theta/math.Pi)
+```
+
 ### Reflection
+[refelct package](https://golang.org/pkg/reflect/)
+> Package reflect implements run-time reflection, allowing a program to 
+> manipulate objects with arbitrary types. The typical use is to take a value 
+> with static type interface{} and extract its dynamic type information by 
+> calling TypeOf, which returns a Type.
+
+```go
+    type S struct {
+        F0 string `alias:"field_0"`
+        F1 string `alias:""`
+        F2 string
+    }
+
+    s := S{}
+    st := reflect.TypeOf(s)
+    for i := 0; i < st.NumField(); i++ {
+        field := st.Field(i)
+        if alias, ok := field.Tag.Lookup("alias"); ok {
+            if alias == "" {
+                fmt.Println("(blank)")
+            } else {
+                fmt.Println(alias)
+            }
+        } else {
+            fmt.Println("(not specified)")
+        }
+    }
+```
+
 ## Future
 ## Sample Users
 ## Summary
