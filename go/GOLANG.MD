@@ -1,9 +1,8 @@
-Nevertheless -> bessere formulierung finden
 # Go, Introduction
 
 So, before we dive into the talk I want to inform you that most of the information presented in this talk is originated from the golang.org Project Page or some of the Code-Examples are written by me.
 
-Secondly I must admit that i really enjoy writing code in go, but I have only used the language in private learning projects. Nevertheless, there are some major companies and projects that use Go as there productive main language, which you will see in Chapter **Sample Users**.
+I must admit that i really enjoy writing code in go, but I have only used the language in private learning projects. But there are some major companies and projects that use Go as there productive main language, which you will see in Chapter **Sample Users**.
 
 ## Why Go
 ...
@@ -96,7 +95,7 @@ And for fatal errors go provides *panic* and *recover*.
 ### Garbage collection
 For a systems language, garbage collection is a controversial feature, but for an concurrent object-oriented language it is almost essential to have automatic memory management because the ownership of a peace of memory can be tricky to follow as it is passed around in different path's of execution.
 
-Nevertheless garbage collection comes with a price; general overhead, latency and complexity of the implementation. Go tries to address this issues by giving the programmer tools to limit allocation by controlling the layout of data structures. One way to reduce the pressure on the collector is by making  interior pointer idiomatic. 
+But garbage collection comes with a price; general overhead, latency and complexity of the implementation. Go tries to address this issues by giving the programmer tools to limit allocation by controlling the layout of data structures. One way to reduce the pressure on the collector is by making  interior pointer idiomatic. 
 
 Example:
 ```go
@@ -139,7 +138,7 @@ An important role in package interactions play interfaces and the howl approach 
 > possible use the software might require, adding layers of type and 
 > abstraction just in case. This is upside down. The way pieces of a system 
 > interact should adapt as it grows, not be fixed at the dawn of time.
-[1]: https://talks.golang.org/2012/splash.article
+[Go at Google: Language Design in the Service of Software Engineering] (https://talks.golang.org/2012/splash.article)
 
 Go interfaces are the backbone of go's approach to object oriented programming, by only defining an set of methods as interface it is relatively easy to extend existing code. The interface satisfaction is statically checked at compile time and can therefore type save. 
 
@@ -187,7 +186,7 @@ Go embodies a variant of CSP with first-class channels. That is, given a C-like 
     </tr>
 </table>
 
-more details on [2](https://arild.github.io/csp-presentation/#1)
+more details on [Communicating Sequential Processes (CSP)](https://arild.github.io/csp-presentation/#1)
 
 ### Example
 ```go
@@ -304,7 +303,7 @@ The net package implements the listener patter for a broad spectrum of use cases
     type Writer interface {
         Write(p []byte) (n int, err error)
     }
-    
+
     r := strings.NewReader("some io.Reader stream to be read\n")
 
     var buf1, buf2 bytes.Buffer
@@ -316,6 +315,49 @@ The net package implements the listener patter for a broad spectrum of use cases
 ```
 
 ### Encoding
+[encoding package](https://golang.org/pkg/encoding/)
+>Package encoding defines interfaces shared by other packages that convert 
+>data to and from byte-level and textual representations. Packages that check 
+>for these interfaces include encoding/gob, encoding/json, and encoding/xml. 
+>As a result, implementing an interface once can make a type useful in 
+>multiple encodings. 
+
+```go
+type TextMarshaler interface {
+        MarshalText() (text []byte, err error)
+}
+type TextUnmarshaler interface {
+        UnmarshalText(text []byte) error
+}
+```
+
+And there are a cuple of packages implementing certen encodings, like:
+<table>
+    <thead>
+        <td>package</td>
+        <td>description</td>
+    </thead>
+    <tr>
+        <td>asn1</td>
+        <td>DER-encoding as defined in ITU-T Rec X.690</td>
+    </tr>
+    <tr>
+        <td>base64</td>
+        <td>encoding as specified by RFC 4648</td>
+    </tr>
+    <tr>
+        <td>gob</td>
+        <td>for binary exchange between an Encoder and a Decoder</td>
+    </tr>
+    <tr>
+        <td>json</td>
+        <td>JSON encoding as defined in RFC 7159</td>
+    </tr>
+    <tr>
+        <td>pem</td>
+        <td>PEM data encoding, originated in Privacy Enhanced Mail</td>
+    </tr>
+</table>
 
 ### Math
 ### Reflection
