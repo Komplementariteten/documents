@@ -218,10 +218,105 @@ func main() {
 Supported through the go's rich tool environment, the language is shipped with an great collection of std packages in the general spirit of go, the focus to support software engineering. Beside the std packages there are a lot of open source and easy to use packages, most of them can be found on github.
 
 ### Testing and Benchmarking
-Go 
+Go ships a straigt forwart unit-test toolset and package set, which ingerates writing unittests smoothly and natural in the development process. With yust small changes to the tests, they are easy extended to benmarks.
+```go
+import (
+    "testing"
+)
+
+func TestCreateSortedHist(t *testing.T) {
+    sl := SetupTestDataSh(t)
+    fs := sl.Freqs()
+    if fs[sl.size-2] >= fs[sl.size-1] {
+        t.Fatal("Failed to sort List")
+    }
+}
+
+func BenchmarkConnect(b *testing.B) {
+    cfg := GetTestCfg()
+    d, err := OpenStorage(cfg)
+    if err != nil {
+        b.Fatal(err)
+    }
+    defer d.Close()
+    d.Serve()
+    con := d.Connect()
+    for i := 0; i < b.N; i++ {
+        r := new(StorageRequest)
+        con.RequestChannel <- *r
+        <-con.ResponseChannel
+    }
+    CleanTestDb()
+}
+```
 ### Net
-### Encoding
+The net package implements the listener patter for a broad spectrum of use cases.
+```go
+    addr, err := net.ResolveTCPAddr("tcp6", "[::]:56784")
+    if err != nil {
+        t.Fatal(err)
+    }
+    ln, err := net.ListenTCP("tcp6", addr)
+    defer ln.Close()
+    if err != nil {
+        t.Fatal(err)
+    }
+    go func() {
+        con, err := ln.AcceptTCP()
+        defer con.Close()
+        if err != nil {
+            t.Fatal(err)
+        }
+        con.Write([]byte("foo"))        
+    }()
+
+    client, err := net.DialTCP("tcp6", nil, addr)
+    defer client.Close()
+
+    if err != nil {
+        t.Fatal(err)
+    }
+```
 ### IO
+[io package](https://golang.org/pkg/io/)
+>Package io provides basic interfaces to I/O primitives. Its primary job is to 
+>wrap existing implementations of such primitives, such as those in package 
+>os, into shared public interfaces that abstract the functionality, plus some 
+>other related primitives.
+
+**The reader interface**
+
+```go
+// Reader interface
+    type Reader interface {
+        Read(p []byte) (n int, err error)
+    }
+    r := strings.NewReader("some io.Reader stream to be read\n")
+    shortBuf := make([]byte, 3)
+    if _, err := io.ReadAtLeast(r, shortBuf, 4); err != nil {
+        fmt.Println("error:", err)
+    }
+```
+
+**The writer interface**
+
+```go
+    type Writer interface {
+        Write(p []byte) (n int, err error)
+    }
+    
+    r := strings.NewReader("some io.Reader stream to be read\n")
+
+    var buf1, buf2 bytes.Buffer
+    w := io.MultiWriter(&buf1, &buf2)
+
+    if _, err := io.Copy(w, r); err != nil {
+        log.Fatal(err)
+    }
+```
+
+### Encoding
+
 ### Math
 ### Reflection
 ## Future
