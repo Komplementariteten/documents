@@ -30,7 +30,7 @@ Individual features of a language don't address these issues. A larger view of s
 
 Go was therefore designed with clarity and tooling in mind, and has a clean syntax. Compared to other languages in the C family, its grammar is modest in size, with only 25 keywords (C99 has 37; C++11 has 84; the numbers continue to grow). More important, the grammar is regular and therefore easy to parse (mostly; there are a couple of quirks we might have fixed but didn't discover early enough). Unlike C and Java and especially C++, Go can be parsed without type information or a symbol table; there is no type-specific context. The grammar is easy to reason about and therefore tools are easy to write.
 
-From: [Go at Google: Language Design in the Service of Software Engineering] (https://talks.golang.org/2012/splash.article)
+From: [Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article)
 
 ## Overview
 Go was designed with some basic principles in mind, regarding the reasons the language came to existence. 
@@ -139,7 +139,7 @@ An important role in package interactions play interfaces and the howl approach 
 > abstraction just in case. This is upside down. The way pieces of a system 
 > interact should adapt as it grows, not be fixed at the dawn of time.
 
-[Go at Google: Language Design in the Service of Software Engineering] (https://talks.golang.org/2012/splash.article)
+[Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article)
 
 Go interfaces are the backbone of go's approach to object oriented programming, by only defining an set of methods as interface it is relatively easy to extend existing code. The interface satisfaction is statically checked at compile time and can therefore type save. 
 
