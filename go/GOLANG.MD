@@ -466,5 +466,211 @@ Example Polar returns absolute vale r and phase θ of x
 ```
 
 ## Future
+In Gophercan 2017, Russ Cox, one of the language designer at google give us a brife overview how the language designers see the developing of the language.
+You can read this for your self in [Toward Go 2](https://blog.golang.org/toward-go2) a text written for his talk.
+I think the beside the new fetaurs Go 2 will provide it is important to know that they still stick to the same goal the langauge is originated in:
+
+> We want to make programmers more effective at managing two kinds of scale: 
+> production scale, especially concurrent systems interacting with many other 
+> servers, exemplified today by cloud software; and development scale, 
+> especially large codebases worked on by many engineers coordinating only 
+> loosely,
+
+Ross Cox addresses the reasoning as follwed:
+> Our goal for Go 2 is to fix the most significant ways Go fails to scale.
+ 
+which will be done under the self given constrain:
+> The most important constraint is existing Go usage. [...] We must ask them 
+> to unlearn old habits and learn new ones only when the reward is great. [...]
+>  Go 2 must also bring along all the existing Go 1 source code. We must not 
+>  split the Go ecosystem.
+
+keeping this in ming means that bringing the language to the next step is not am end in itself. They collected and considered expirance reports collected since the anouncment of Go 2. [Report collection](https://github.com/golang/go/wiki/ExperienceReports)
+
+But what is currently know of the Go 2 Design process, basicly that check and handle will be intreduced to the language to make error handling less repetitious.
+
+```go
+// Actual Go Code
+func CopyFile(src, dst string) error {
+    r, err := os.Open(src)
+    if err != nil {
+        return err
+    }
+    defer r.Close()
+
+    w, err := os.Create(dst)
+    if err != nil {
+        return err
+    }
+    defer w.Close()
+
+    if _, err := io.Copy(w, r); err != nil {
+        return err
+    }
+    if err := w.Close(); err != nil {
+        return err
+    }
+}
+// With Go 2
+func main() {
+    handle err {
+        log.Fatal(err)
+    }
+
+    hex := check ioutil.ReadAll(os.Stdin)
+    data := check parseHexdump(string(hex))
+    os.Stdout.Write(data)
+}
+
+```
+
+And an other topic, could be generics, but this is still in the design process.
+
+```go
+// without generics
+func Uniq(in <- chan string) <- chan string {
+    out := make(chan string)
+    go func () {
+        v : <- in
+        out <- v
+        for next := range in {
+            if v != next {
+                v = next
+                out <- v
+            }
+        }
+    }
+}
+
+// generic apraoch
+contract Equal(t T) {
+    t == t
+}
+
+func Uniq(type T Equal) (in <- chan T) <-chan T {
+    out := make(chan T)
+    go func () {
+        v : <- in
+        out <- v
+        for next := range in {
+            if v != next {
+                v = next
+                out <- v
+            }
+        }
+    }   
+}
+```
 ## Sample Users
-## Summary
+<table>
+    <thead>
+        <td>company / project</td>
+        <td>country</td>
+        <td>note</td>
+    </thead>
+    <tr>
+        <td>atlassian</td>
+        <td>Australia</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>be-mobile</td>
+        <td>Belgium</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Wilab</td>
+        <td>Argentina</td>
+        <td>Industial / Oil & Gas IoT platform</td>
+    </tr>
+    <tr>
+        <td>kira</td>
+        <td>Canada</td>
+        <td>ml for contracts and documents</td>
+    </tr>
+    <tr>
+        <td>koho</td>
+        <td>Canada</td>
+        <td>fin-tec</td>
+    </tr>
+    <tr>
+        <td>algolia</td>
+        <td>france</td>
+        <td>search engine</td>
+    </tr>
+    <tr>
+        <td>psa</td>
+        <td>France</td>
+        <td>Automobile</td>
+    </tr>
+    <tr>
+        <td>deliveryhero / lieferheld</td>
+        <td>Germany</td>
+        <td>Lieferdienst vernetzung</td>
+    </tr>
+    <tr>
+        <td>centrifuge</td>
+        <td>Germany</td>
+        <td>Financial supply chain managment</td>
+    </tr>
+    <tr>
+        <td>zalando</td>
+        <td>Germany</td>
+        <td>online shop</td>
+    </tr>
+    <tr>
+        <td>socialcops</td>
+        <td>India</td>
+        <td>Business intelligence platform</td>
+    </tr>
+    <tr>
+        <td>ThoughtWorks</td>
+        <td>India</td>
+        <td>Software development company</td>
+    </tr>
+    <tr>
+        <td>eyesight</td>
+        <td>Israel</td>
+        <td>edge-based computer vision ai</td>
+    </tr>
+    <tr>
+        <td>iguazio</td>
+        <td>Israel</td>
+        <td>Data Science and Analytics PaaS</td>
+    </tr>
+    <tr>
+        <td>mathematic.ai</td>
+        <td>Israel</td>
+        <td>Applied algorithmic R&D Service</td>
+    </tr>
+    <tr>
+        <td>nikai inc.</td>
+        <td>Japan</td>
+        <td>stock exchange</td>
+    </tr>
+    <tr>
+        <td>BBC</td>
+        <td>United Kingdom</td>
+        <td>broadcast channel</td>
+    </tr>
+    <tr>
+        <td>Google</td>
+        <td>United States</td>
+        <td>Search engine</td>
+    </tr>
+    <tr>
+        <td>booking.com</td>
+        <td>Netherlands</td>
+        <td>Hotel booking platform</td>
+    </tr>
+    <tr>
+        <td>AT&T</td>
+        <td>United States</td>
+        <td>broadcast network</td>
+    </tr>
+    <tr>
+        <td>Docker</td>
+        <td>United States</td>
+        <td>container software</td>
+    </tr>
+</table>
