@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <title>Go, Introduction to an specialized Language</title>
     <meta charset="utf-8">
     <style>
 
@@ -9,6 +9,7 @@
       h1, h2, h3 {
         font-weight: normal;
       }
+      .goplayground { width: 80%; height: 65%; font-size: 0.8em;}
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
     </style>
   </head>
@@ -18,6 +19,8 @@
 class: center, middle
 
 # Go, Introduction to an specialized Language
+
+[@Komplementariteten/documents](https://github.com/Komplementariteten/documents/tree/master/go)
 
 ---
 
@@ -33,11 +36,124 @@ class: center, middle
 
 ---
 
-# Why Go?
+# Why Go? I
 
 - multicore processors, networked systems, massive computation clusters, and the web programming model were being worked around rather than addressed head-on.
+
 - server programs comprise tens of millions of lines of code, are worked on by hundreds or even thousands of programmers, and are updated literally every day.
+
 - build times, even on large compilation clusters, have stretched to many minutes, even hours.
+
+---
+
+# Why Go? II
+Consequences
+
+- Go was therefore designed with clarity and tooling in mind, and has a clean syntax. (only 25 keywords)
+
+- Go can be parsed without type information or a symbol table; there is no type-specific context.
+
+- Go does have to address the issues that make large-scale software development difficult.
+
+---
+
+# Overview I
+
+- Go has a roughly C like systax
+
+<iframe class="goplayground" src="https://play.golang.org/p/WMyOtFLGwax"></iframe>
+
+
+---
+
+# Overview II
+
+- Explicit error handling
+
+<iframe class="goplayground" src="https://play.golang.org/p/-zWNSkHmvPa"></iframe>
+
+---
+
+# Overview III
+
+- Buildin concurrency
+
+<iframe class="goplayground" src="https://play.golang.org/p/n8xaGOYM4X2"></iframe>
+
+---
+
+# Overview IV
+
+- Garbage collection
+```go
+    type X struct {
+        a, b, c int
+        buf [256]byte
+    }
+```
+
+- Packages
+```go
+    import "encoding/json"
+    var dec = json.NewDecoder(reader)
+```
+
+---
+
+# Syntax I
+
+- declarations are closer to Pascal than to C
+
+- knows only call by name
+
+- names are package local by default, but can be exported
+
+---
+
+# Syntax II
+
+- no pointer arithmetic
+
+- no implicit number conversions
+
+- no type aliases
+
+- interface types
+
+- reflection
+
+---
+
+# OOP I
+
+- methods can be of any type (not just classes)
+
+- no type-based inheritance
+
+- interfaces encourage composition over inheritance
+Example:
+```go
+    type Writer interface {
+        Write(p []byte) (n int, err error)
+    }
+```
+---
+
+# OOP II
+
+<iframe class="goplayground" src="https://play.golang.org/p/qZyB41gno-Z"></iframe>
+
+---
+
+# OOP III
+
+<iframe src="https://play.golang.org/p/MeA6hRVdZ7_k"></iframe>
+
+---
+
+# Tooling I
+
+
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
