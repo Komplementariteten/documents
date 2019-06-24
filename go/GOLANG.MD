@@ -1,11 +1,14 @@
-# Go, Introduction
+# Go, Introduction to an specialized Language
 
 So, before we dive into the talk I want to inform you that most of the information presented in this talk is originated from the golang.org Project Page or some of the Code-Examples are written by me.
 
 I must admit that i really enjoy writing code in go, but I have only used the language in private learning projects. But there are some major companies and projects that use Go as there productive main language, which you will see in Chapter **Sample Users**.
 
 ## Why Go
-...
+Go was first developed as an language to address sertan topics at google and brought to the open source community from an realy early state on. 
+
+Some of this were explaned in [Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article) like:
+
 - The problems introduced by multicore processors, networked systems, massive computation clusters, and the web programming model were being worked around (by the languages used at Google, like c++ java and python) rather than addressed head-on.
 - server programs comprise tens of millions of lines of code, are worked on by hundreds or even thousands of programmers, and are updated literally every day.
 - build times, even on large compilation clusters, have stretched to many minutes, even hours.
@@ -79,7 +82,7 @@ everything design in service of software engineering perspective.
 ### OOP
 Go takes an unusual approach to object-oriented programming, allowing methods on any type, not just classes, but without any form of type-based inheritance like subclassing. This means there is no type hierarchy. This was an intentional design choice. Although type hierarchies have been used to build much successful software, it is our opinion that the model has been overused and that it is worth taking a step back. Instead, Go has interfaces, more to that later. With them Go encourages composition over inheritance, using simple, often one-method interfaces to define trivial behaviors that serve as clean, comprehensible boundaries between components.
 
-### Error hevandling
+### Error handling
 
 In service of software engineering go provides a different set of features to encourage explicit error handling. So go don't use try-catch-finally constructs because the designers believe that exceptions are to easy to ignore, so go forces programmers to think about error handling.
 First multiple return values is the heart and backbone of go's error handling, like shown in the example:
@@ -674,3 +677,5 @@ func Uniq(type T Equal) (in <- chan T) <-chan T {
         <td>container software</td>
     </tr>
 </table>
+
+And far more!
