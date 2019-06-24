@@ -147,13 +147,99 @@ Example:
 
 # OOP III
 
-<iframe src="https://play.golang.org/p/MeA6hRVdZ7_k"></iframe>
+<iframe class="goplayground" src="https://play.golang.org/p/MeA6hRVdZ7_k"></iframe>
 
 ---
 
 # Tooling I
 
+designed to make tooling easy
 
+- **gofmt**
+
+- **gofix**
+
+- **gotest**
+
+- **godoc**
+
+- **delve**
+
+---
+
+# Tooling II - Testing
+
+Testing
+```go
+func TestCreateSortedHist(t *testing.T) {
+    sl := SetupTestDataSh(t)
+    fs := sl.Freqs()
+    if fs[sl.size-2] >= fs[sl.size-1] {
+        t.Fatal("Failed to sort List")
+    }
+}
+```
+
+---
+
+# Tooling III - Benchmarking
+
+Benchmarking
+```go
+func BenchmarkConnect(b *testing.B) {
+    cfg := GetTestCfg()
+    d, err := OpenStorage(cfg)
+    if err != nil {
+        b.Fatal(err)
+    }
+    defer d.Close()
+    d.Serve()
+    con := d.Connect()
+    for i := 0; i < b.N; i++ {
+        r := new(StorageRequest)
+        con.RequestChannel <- *r
+        <-con.ResponseChannel
+    }
+    CleanTestDb()
+}
+```
+
+---
+
+# Concurrency I
+
+Go embodies a variant of CSP with first-class channels.
+
+<iframe class="goplayground" style="height:75%" src="https://play.golang.org/p/DXJEu6oBy20"></iframe>
+
+---
+
+# Concurrency II - CSP
+
+- Expressive concurrency based on message-passing
+
+- Sequential processing
+
+- Synchronous communication through channels
+
+- Multiplexing of channels with alternation
+
+---
+
+# Concurrency III - CSP
+
+![CSP vs. Actor](CSP vs. Actor.png)
+
+--- 
+
+# Std. Packages I
+
+- Go has an rich std. package set
+
+- and an even more rich community set of packages
+
+
+</table>
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">

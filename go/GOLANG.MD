@@ -156,7 +156,7 @@ Interface composition is a different style of programming, and people accustomed
 
 ## Tooling
 Tools are an important part of software engineering. Go's syntax, package system, naming conventions and other features were designed to make tooling easy. One of the best known example of this tools is *gofmt*.
-**gofmt** the Go source code formatter, is not part of the language but so broad used from the beginning that Go code can be considered to have s single style everyone is now familiar with.
+**gofmt** the Go source code formatter, is not part of the language but so broad used from the beginning that Go code can be considered to have a single style everyone is now familiar with.
 An other important tool is **gofix**. It allows the language designers to make sweeping changes to the APIs and applying the changes to existing old code, even if it still works. Old APIs can be deprecated quickly and automatically so only one version of the API needs to be maintained. 
 As an example how good this works, recently Go's protocol buffer implementation was changed and running *go fix* on google's entire code base updated to the new API, so only one version of this API has to be maintained.
 Others are:
