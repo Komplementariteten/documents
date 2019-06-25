@@ -16,9 +16,9 @@ Some of this were explaned in [Go at Google: Language Design in the Service of S
 ***Go was designed and developed to make working in this environment more productive***
 
 Go was designed to address the problems faced in software development at Google, which led to a language that is not a breakthrough research language but is nonetheless an excellent tool for engineering large software projects.
-The goals of the Go project were to eliminate the slowness and clumsiness of software development at Google, and thereby to make the process more productive and scalable. The language was designed by and for people who write—and read and debug and maintain—large software systems.
+The goals of the Go project were to eliminate the slowness and clumsiness of software development at Google, and thereby to make the process more productive and scalable. The language was designed by and for people who write and read and debug and maintain large software systems.
 
-When Go launched, some claimed it was missing particular features or methodologies that were regarded as de rigueur for a modern language. How could Go be worthwhile in the absence of these facilities? Our answer to that is that the properties Go does have to address the issues that make large-scale software development difficult. These issues include:
+When Go launched, some claimed it was missing particular features or methodologies that were regarded as de rigueur for a modern language. How could Go be worthwhile in the absence of these facilities? Our answer to that is that the properties Go does have to address the issues that make large scale software development difficult. These issues include:
 
 - slow builds
 - uncontrolled dependencies
