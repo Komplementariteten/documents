@@ -38,8 +38,10 @@ From: [Go at Google: Language Design in the Service of Software Engineering](htt
 ## Overview
 Go was designed with some basic principles in mind, regarding the reasons the language came to existence. 
 - Dependencies: Go was designed to work at scale, with large programs, with lots of dependencies, which large teams of programmers working on it
+
 - Must be familiar, roughly C like. So new programmers get productive quickly.
-- Must be modern, so make better use of multi-core computers and networking, with for example build in concurrency
+- Must be modern, so make better use of multi-core computers and networking, 
+with for example build in concurrency
 
 ### Build System
 The main mechanism by which Go achieves fast build times is its dependency management. The compiler processes only one file when an import statement is ridden and writes an headerfile for it. No actual program code is processed. Parsing the dependency graph can therefore be far more efficient than in C / C++. Also the dependency graph contains no cycles, but more to that in the packages chapter. Measurements at Google of compiling a large program written in Go with the earlier version written in C++ found an 50 times better compilation for the Go version. But there is more to that in the article mentioned in the earlier chapter.
