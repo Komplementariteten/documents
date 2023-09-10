@@ -118,4 +118,24 @@ flowchart TD
     C --> E["🤔" MPU supported]
     E -- Yes --> F["🎉" Nice]
     E -- NO --> G["🛠️"use rust or C]
+```
 
+### Getting Started🚀
+
+1. Connect your Device
+    * micro:bit v2 with USB-C using JTAG/SWD over CMSIS-DAP
+    * Arduino Uno r3 with Custom Protokol over USB
+    * Raspberry PI 4 SSH or Serial Connection to OS.
+        * without OS USB to TTL Serial Cable
+    * Coral micro Usb-c Serial with FreeRTOS
+        * MCUXpresso for bare metal
+2. Setup Editor
+    * Visual Studio Code (Raspberry PI, Coral micro, micro:bit)
+    * Arduino IDE 2 (Arduino Uno r3)
+    * Microbit python Editor (micro:bit)
+3. Setup Toolchain
+    * micro:bit v2 
+
+
+### Micro Python
+![Micro Python](img/640px-MicroPython_new_logo.svg.png)
