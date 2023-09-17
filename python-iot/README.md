@@ -133,9 +133,76 @@ flowchart TD
     * Visual Studio Code (Raspberry PI, Coral micro, micro:bit)
     * Arduino IDE 2 (Arduino Uno r3)
     * Microbit python Editor (micro:bit)
-3. Setup Toolchain
-    * micro:bit v2 
+
+## Setup Toolchain 
+
+* Install Python 3
+    * Windows / Mac OS. [https://www.python.org/downloads/](https://www.python.org/downloads/)
+    * Linux (Ubuntu) 
+    ```bash
+    sudo apt-get install python3
+    ```
+    * Linux (Archlinux)
+    ```bash
+    sudo pacman -S python3
+    ```
+    * Linux (build from source)
+    ```bash
+    ./configure
+    make
+    make install
+    ```
+* Visual Studio Code
+![VS Code](img/vss-overview.png)
+
+   * Windows / Mac OS. [https://code.visualstudio.com/](https://code.visualstudio.com/)
+   * Linux See: [https://code.visualstudio.com/docs/setup/linux](https://code.visualstudio.com/docs/setup/linux)
+
+* Arduino IDE 2
+![Arduino IDE 2](img/arduino-local-sketchbook.png)
+    * Windows / Mac OS [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software)
+    * Linux See: [IDE 2 Downloading and Installing](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing)
+
+* Coral micro and FreeRTOS
+    * Arduino IDE [Get started with Ardunio](https://coral.ai/docs/dev-board-micro/arduino/)
+    * FreeRTOS (advanced) [Setup FreeRTOS development](https://coral.ai/docs/dev-board-micro/get-started/#4-set-up-for-freertos-development)
+    * Build Coral Platform (advanced) [Build coral Platform](https://coral.ai/docs/notes/build-coral/)
+
+### micro:bit v2 
+ 
+#### Visual Studio Code
+- Visual Studio Code extension
+![Micro:bit Extension](img/vsc-micro-bit.png)
+
 
 
 ### Micro Python
 ![Micro Python](img/640px-MicroPython_new_logo.svg.png)
+
+Toolset providing a python API to sepcific Boards like:
+- STM32 Board family
+- BBC micro:bit
+- pyboard
+- ESP8266
+- ESP32
+- NXP i.MXRT 10xx
+- WiPy/CC3200
+- SAMD21/SAMD51
+
+#### BBC micro:bit v2 Example
+```py
+from microbit import *
+
+while True:
+    if button_a.is_pressed():
+        display.show(Image.HAPPY)
+    elif button_b.is_pressed():
+        break
+    else:
+        display.show(Image.SAD)
+
+display.clear()
+```
+
+**Web based Micro Python** [https://python.microbit.org](https://python.microbit.org/v/3)
+
