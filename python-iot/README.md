@@ -18,10 +18,10 @@ Parkplatzüberwachung, Ampelsteuerung, Umspannwerken, Durchflussüberwachung fü
 
 Diese Liste liesse sich beliebig ausweiten und soll nur veranschaulichen das Software und APUs heute überall zu finden sind, nicht nur in den vielleicht offensichtlicheren Anwendungen wie Smarthomes oder Homecomputer.
 
-## Embedded? Embedded!
+# Embedded? Embedded!
 Durch die Makersceene und projekten wie Ardunio ist das Entwickeln von Embedded Anwendungen heute nicht mehr nur möglich für Ingenieur*Innen oder Informatiker*Innen sondern gibt es viel Möglichkeiten für Hobby Projekte einen Einstieg in das Thema zu finden. 
 
-### BBC micro:bit v2
+## BBC micro:bit v2
 Geräde für Menschen die etwas Erfahrung mit python (aber auch in anderen Sprachen wie rust oder c) gesammelt haben und sich in der Embeddes Entwicklung versuchen wollen, ist der micro:bit ein sehr guter Einstieg.
 ![micro:bit v2](img/MICROBIT_V2_01.jpg)
 * Viele Beispiele
@@ -30,7 +30,7 @@ Geräde für Menschen die etwas Erfahrung mit python (aber auch in anderen Sprac
 * Einfach zu nutzendes Programmier Interface
 * Gute Dokumentation
 
-#### Specs
+### Specs
 | Type | Component | Comment |
 |---|---|---|
 | MPU | Nordic nRF52833 | Arm Cortex-M4 |
@@ -46,7 +46,7 @@ Geräde für Menschen die etwas Erfahrung mit python (aber auch in anderen Sprac
 | on-board | | LEDs |
 
 
-### Arduino Uno Rev 3.
+## Arduino Uno Rev 3.
 Sehr beliebt in der Maker Scene. Kein Python Support (Erst by Boards wie Ardunio Nano oder Giga als auch Portenta h7).
 ![Arduino Uno](img/Arduino_r3.jpg)
 * Sehr viele Beispiele
@@ -55,7 +55,7 @@ Sehr beliebt in der Maker Scene. Kein Python Support (Erst by Boards wie Ardunio
 * Günstig (~25 €)
 * Open Source Hardware
 
-#### Specs
+### Specs
 | Type | Component | Comment |
 |---|---|---|
 | MPU | ATmega328 | 8-bit AVR |
@@ -67,7 +67,7 @@ Sehr beliebt in der Maker Scene. Kein Python Support (Erst by Boards wie Ardunio
 | on-board | | USB-B (USB 1.0) |
 | on-board | | LEDs |
 
-### Raspberry PI 4 Modul B
+## Raspberry PI 4 Modul B
 Vergleichbar mit Homecomputer, mit GPU und Betriebssystem.
 ![Raspberry PI 4](img/Raspberry_Pi_4_Model_B_-_Top.jpg)
 * Schnelle CPU
@@ -76,7 +76,7 @@ Vergleichbar mit Homecomputer, mit GPU und Betriebssystem.
     * Full Python support
 * Graphics Card in SoM
 * 64 bit
-#### Specs
+### Specs
 | Type | Component | Comment |
 |---|---|---|
 | MPU | Broadcom BCM2711 | quad-Core ARM Cortex-A72 |
@@ -89,14 +89,14 @@ Vergleichbar mit Homecomputer, mit GPU und Betriebssystem.
 | on-board | | 40-pin digital IO |
 | on-board | | LEDs |
 
-### Coral Dev Board Micro
+## Coral Dev Board Micro
 Auf Machine Learning spezialisiertes Board. Später mehr dazu.
 ![Coral Micro](img/micro-inhand.jpg)
 * Neu am Markt
 * ~100€
 * FreeRTOS
 * TPU
-#### Specs
+### Specs
 | Type | Component | Comment |
 |---|---|---|
 | MPU | NXP i.MX RT1176 | Cortex M7 and M4 |
@@ -108,7 +108,7 @@ Auf Machine Learning spezialisiertes Board. Später mehr dazu.
 | Camera | HM01B0 CMOS sensor | 324 x 324 on board Camera |
 | Microphone | on-board | PDM Mono Microphone |
 
-## Embedded python
+# Embedded python
 ```mermaid
 flowchart TD
     A[Opperation System]
@@ -120,7 +120,7 @@ flowchart TD
     E -- NO --> G["🛠️"use rust or C]
 ```
 
-### Getting Started🚀
+## Getting Started🚀
 
 1. Connect your Device
     * micro:bit v2 with USB-C using JTAG/SWD over CMSIS-DAP
@@ -153,13 +153,13 @@ flowchart TD
     make install
     ```
 * Visual Studio Code
-![VS Code](img/vss-overview.png)
+![VS Code](https://upload.wikimedia.org/wikipedia/commons/4/42/VS_Code_1.36.0-insider.png)
 
    * Windows / Mac OS. [https://code.visualstudio.com/](https://code.visualstudio.com/)
    * Linux See: [https://code.visualstudio.com/docs/setup/linux](https://code.visualstudio.com/docs/setup/linux)
 
 * Arduino IDE 2
-![Arduino IDE 2](img/arduino-local-sketchbook.png)
+![Arduino IDE 2](https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Ide-2-overview.png/1024px-Ide-2-overview.png)
     * Windows / Mac OS [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software)
     * Linux See: [IDE 2 Downloading and Installing](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing)
 
@@ -169,15 +169,15 @@ flowchart TD
     * Build Coral Platform (advanced) [Build coral Platform](https://coral.ai/docs/notes/build-coral/)
 
 ### micro:bit v2 
- 
-#### Visual Studio Code
 - Visual Studio Code extension
 ![Micro:bit Extension](img/vsc-micro-bit.png)
 
+###
 
+# micro:bit v2 
 
-### Micro Python
-![Micro Python](img/640px-MicroPython_new_logo.svg.png)
+## Micro Python
+![Micro Python](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/MicroPython_new_logo.svg/100px-MicroPython_new_logo.svg.png)
 
 Toolset providing a python API to sepcific Boards like:
 - STM32 Board family
@@ -189,8 +189,8 @@ Toolset providing a python API to sepcific Boards like:
 - WiPy/CC3200
 - SAMD21/SAMD51
 
-#### BBC micro:bit v2 Example
-```py
+### BBC micro:bit v2 Example
+```python
 from microbit import *
 
 while True:
@@ -206,3 +206,53 @@ display.clear()
 
 **Web based Micro Python** [https://python.microbit.org](https://python.microbit.org/v/3)
 
+# ML on Edge TPU
+Spezialisiert auf **deep feed-forward** neurale Netzwerke wie etwa CNN's die 8-bit quatifiziert sind. Das heißt die regulären 32bit gleitkomma Parameter müssen in 8-bit representationen convertiert werden. 
+
+## TPU
+![TPU v4](https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/TPU_v4.png/800px-TPU_v4.png)
+
+Auf TensorFlow spezialisierter beschleuniger Chip.
+
+## Tensor?
+> Multilineare Abbildung von Vektoren auf einen Vektor mit der universellen Eigenschaft: 
+> Ein elementarer Tensor (oder einfacher Tensor) bildet auf einen Zahlenwert (Skalar) ab
+
+```python
+>>> import tensorflow as tf
+>>> tf.constant(42)
+<tf.Tensor: shape=(), dtype=int32, numpy=42>
+
+>>> t = tf.constant([[1., 2., 3.], [4., 5., 6.]])
+<tf.Tensor: shape=(2, 3), dtype=float32, numpy=
+array([[1., 2., 3.],
+       [4., 5., 6.]], dtype=float32)>
+>>> t.shape
+TensorShape([2, 3])
+>>> t.dtype
+tf.float32
+```
+
+## Model requirements Coral TPU
+- 8-bit festpunkt quantisierte Tensor parameter
+- Kompilier-Konstante Tensor größe
+- Modell parameter Kompilier-Zeit konstant
+- 1-,2-, oder 3- Dimensionale Tensoren
+- Edge TPU unterstütze Tensor Opperationen
+
+## Workflow
+```mermaid
+flowchart TB
+    C --> | Convert | D([TensorFlow lite])
+    subgraph tf[TensorFlow]
+        direction LR
+            A([TensorFlow model])
+            A --> | train | B([TensorFlow model])
+            B --> | export | C([Frozen graph])
+    end 
+    subgraph coral[Edge TPU]
+        direction RL
+            D --> | Compile | E([Edge TPU model])
+            E --> | Deploy | F([Coral Hardware])
+    end
+```
