@@ -249,6 +249,8 @@ $\hat{y} = p_0 + p_1 x_1^1 + p_2 x_2^2 + \dotsc + p_n x_n^n$
 
 $\vec{p} = (X^T X)^{-1} X^T \vec{y} $ 
 
+[Example](src/ml_polreg/main.py)
+
 
 ## Model requirements Coral TPU
 - 8-bit festpunkt quantisierte Tensor parameter

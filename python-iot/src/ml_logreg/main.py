@@ -1,16 +1,16 @@
-# This is a sample Python script.
-
-# Press Umschalt+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Strg+F8 to toggle the breakpoint.
+from sklearn.linear_model import LogisticRegression
+import matplotlib.pyplot as plt
+import numpy as np
+import data
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+log_reg = LogisticRegression()
+X, Y = data.log_data()
+log_reg.fit(X, Y)
+X_new = np.linspace(0, 3, 1000).reshape(-1, 1)
+y_proba = log_reg.predict_proba(X_new)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+plt.ioff()
+plt.plot(X_new, y_proba[:, 1], "g--", label="Iris virginica")
+plt.plot(X_new, y_proba[:, 0], "b--", label="Nicht Iris virginica")
+plt.show()
