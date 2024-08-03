@@ -1,0 +1,68 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper, margin=2cm]{geometry} % Seitenränder einstellen
+\usepackage{fontspec} % Paket für Schriftart
+\setmainfont{Arial} % Schriftart auf Arial setzen
+\usepackage{setspace} % Paket für Zeilenabstand
+\onehalfspacing % 1,5-facher Zeilenabstand
+\usepackage{parskip} % Paket für Abstand zwischen Absätzen
+\setlength{\parskip}{6pt} % 6 Punkt zusätzlicher Abstand zwischen Absätzen
+\usepackage{csquotes} % Paket für Zitate
+\usepackage[style=apa,backend=biber]{biblatex} % Paket für Zitate im APA-Stil
+\DeclareLanguageMapping{ngerman}{ngerman-apa} % Deutsche Sprache für APA
+\addbibresource{literatur.bib} % Literaturdatei einbinden
+\usepackage{tocloft} % Paket für Anpassung des Inhaltsverzeichnisses
+\usepackage[hidelinks]{hyperref} % Paket für Hyperlinks
+
+\begin{document}
+\pagenumbering{roman}
+\begin{titlepage}
+    \begin{center}
+        \vspace*{2cm}
+
+        {\LARGE \textbf{Titel der Arbeit}}\\[1.5cm] % Titel der Arbeit
+        
+        {\large \textbf{Advanced Workbook}}\\[1.5cm] % Art der Arbeit
+
+        \textbf{DLBWIRITT01 - Einführung in das wissenschaftliche Arbeiten für IT und Technik}\\[0.5cm] % Kursbezeichnung
+
+        \textbf{Studiengang}\\[1.5cm] % Studiengang
+
+        \begin{tabbing}
+            \hspace*{4cm}\=\kill
+            Datum: \> \today \\[0.5cm] % Aktuelles Datum
+            Name: \> Vorname Nachname\\[0.5cm] % Ihr Name
+            Matrikelnummer: \> Matrikelnummer \\[0.5cm] % Ihre Matrikelnummer
+        \end{tabbing}
+
+        \vfill
+
+    \end{center}
+\end{titlepage}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+\section{Aufgabe: Wissenschaftstheorie}
+\begin{enumerate}
+    \item Suche Dir einen wissenschaftlichen Artikel aus dem Fachgebiet der IT und Technik aus (z.B. aus einer
+Fachzeitschrift, einem Fachbuch, Sammelband oder Conference Proceedings). Wähle dabei einen Artikel,
+der nicht im Skript erwähnt wird. Die Quelle muss die Kriterien für eine gute wissenschaftliche Arbeit
+erfüllen, um damit diese und die folgenden Workbook Aufgaben zu bearbeiten (z.B. typische Struktur,
+hinreichende Länge und Literaturverzeichnis mit mehreren Quellen). Nutze hierfür bevorzugt die Online-
+Bibliothek der Library and Information Services (LIS). Führe den Artikel mit vollständigen
+Literaturangaben gemäß den Regelungen aus dem Skript/Zitierleitfaden auf.
+    \item Fasse
+        \begin{enumerate}
+            \item die Problemstellung/den Hintergrund des Artikels,
+            \item die Zielsetzung/Forschungsfrage(n)/Ziele und
+            \item die wesentlichen Ergebnisse und Schlussfolgerungen aus dem Artikel in eigenen Worten zusammen.
+Das heißt, Du sollst den Text indirekt zitieren, gemäß den Zitationsregeln aus dem Skript und
+Zitierleitfaden.
+        \end{enumerate}
+    \item Bestimme die Forschungsmethodik aus dem Artikel und nenne drei Argumente, warum es sich um eine
+qualitative bzw. quantitative Forschungsmethodik oder bspw. um eine Literatur- oder Übersichtsarbeit
+handelt.
+\end{enumerate}
+\printbibliography
+
+\end{document}
