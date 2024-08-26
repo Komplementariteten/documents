@@ -1,0 +1,81 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper, margin=2cm]{geometry} % Seitenränder einstellen
+\usepackage{setspace} % Paket für Zeilenabstand
+\onehalfspacing % 1,5-facher Zeilenabstand
+\usepackage{parskip} % Paket für Abstand zwischen Absätzen
+\setlength{\parskip}{6pt} % 6 Punkt zusätzlicher Abstand zwischen Absätzen
+\usepackage{csquotes} % Paket für Zitate
+\usepackage[style=apa,backend=biber]{biblatex} % Paket für Zitate im APA-Stil
+\DeclareLanguageMapping{ngerman}{ngerman-apa} % Deutsche Sprache für APA
+\addbibresource{literatur.bib} % Literaturdatei einbinden
+\usepackage[hidelinks]{hyperref} % Paket für Hyperlinks
+\usepackage{amsmath}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arcoth}{arcoth}
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\sgn}{sgn}
+\usepackage{multirow}
+\usepackage{array}
+
+\begin{document}
+
+\section{Grund- oder Stammintegrale}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular} {|m{7cm}|m{7cm}|}
+ \hline
+ $\int{0} dx = C$ & $\int{1} dx = C + 1$ \\
+ \hline
+ $\int{x^n} dx = \frac{x^{n+1}}{n + 1} + C$ & $ \int{\frac{1}{x}} dx = \ln{|x|} + C$ \\
+ \hline
+ $\int{e^x} dx = e^x + C$ & $ \int{a^x} dx = \frac{a^x}{\ln{a}} + C$ \\
+ \hline
+ $\int{\sin{x}} dx = -\cos{x} + C$ & $ \int{\cos{x}} dx = \sin{x} + C$ \\
+ \hline
+ $\int{\frac{1}{\cos^2{x}}} dx = \tan{x} + C$ & $ \int{\frac{1}{\sin^2{x}}} dx = -\cot{x} + C$ \\
+ \hline
+\renewcommand{\arraystretch}{1}
+ \begin{equation*}
+ 	\int{\frac{1}{\sqrt{1 + x^2}}} dx = 
+ 	\begin{cases}
+ 		\phantom{-}\arcsin{x} + C_1 \\
+ 		- \arccos{x} + C_2
+ 	\end{cases} 
+ \end{equation*} 
+ \renewcommand{\arraystretch}{2}
+ & 
+ \renewcommand{\arraystretch}{1}
+ \begin{equation*}
+ 	\int{\frac{1}{\sqrt{1 - x^2}}} dx = 
+ 	\begin{cases}
+ 		\phantom{-} \arctan{x} + C_1 \\
+ 		- \arccot{x} + C_2
+ 	\end{cases} 
+ \end{equation*} 
+ \renewcommand{\arraystretch}{2}\\
+ \hline
+ $\int{\sinh{x}} dx = \cosh{x} + C$ & $ \int{\cosh{x}} dx = \sinh{x} + C$ \\
+ \hline
+ $\int{\frac{1}{\cosh^2{x}}} dx = \tanh{x} + C$ & $\int{\frac{1}{\sinh^2{x}}} dx = -\coth{x} + C$\\
+ \hline
+ \multicolumn{2}{|l|}{$\int{\frac{1}{\sqrt{x^2 + 1}}} dx = \arsinh{x} + C = \ln{x + \sqrt{x^2+1}} + C$}\\
+ \hline
+ \multicolumn{2}{|p{14cm}|}{$\int{\frac{1}{\sqrt{x^2 - 1}}} dx = \sgn{x} * \arcosh{|x|} + C = \ln{|x + \sqrt{x^2-1}|} + C \hspace{\fill} \text{$(|x| > 1$})$}\\
+ \hline
+ \multicolumn{2}{|p{14cm}|}{
+ \begin{equation*}
+ \int{\frac{1}{1-x^2}} dx = 
+ \begin{cases}
+	\artanh{x} + C_1 = \frac{1}{2} \ln{\frac{1 + x} {1 - x}} + C_1 & \text{$|x| < 1$}\\
+ 	\arcoth{x} + C_2 = \frac{1}{2} \ln{\frac{x - 1} {x - 1}} + C_2 & \text{$|x| > 1$}
+ \end{cases}
+ \end{equation*}
+ }\\
+ \hline
+ \end{tabular}
+\renewcommand{\arraystretch}{1}
+\end{center}
+\end{document}
