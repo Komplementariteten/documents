@@ -1,0 +1,15 @@
+*.log
+*.tmp
+*.xref
+*.div
+*.4ct
+*.4tc
+*.bcf*
+*.aux
+*.out
+*.dvi
+*.fdb*
+*.run*
+*.idv
+*.fls
+*.lg
