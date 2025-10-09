@@ -1,0 +1,225 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{soni}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=46eb7b3261f9810766a868bb8aae1738}{%
+           family={Anil\bibnamedelimb Kumar\bibnamedelima Soni},
+           familyi={A\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={B.\bibnamedelimi Purnachandra\bibnamedelima Rao},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{46eb7b3261f9810766a868bb8aae1738}
+      \strng{fullhash}{46eb7b3261f9810766a868bb8aae1738}
+      \strng{fullhashraw}{46eb7b3261f9810766a868bb8aae1738}
+      \strng{bibnamehash}{46eb7b3261f9810766a868bb8aae1738}
+      \strng{authorbibnamehash}{46eb7b3261f9810766a868bb8aae1738}
+      \strng{authornamehash}{46eb7b3261f9810766a868bb8aae1738}
+      \strng{authorfullhash}{46eb7b3261f9810766a868bb8aae1738}
+      \strng{authorfullhashraw}{46eb7b3261f9810766a868bb8aae1738}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sensing and Imaging}
+      \field{number}{1}
+      \field{title}{Lock-in Amplifier Based Eddy Current Instrument for Detection of Sub-surface Defect in Stainless Steel Plates}
+      \field{volume}{19}
+      \field{year}{2018}
+      \field{pages}{32\bibrangedash 43}
+      \range{pages}{12}
+    \endentry
+    \entry{martin}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0de546c86a0ad398cdfc37c40d3aeeed}{%
+           family={Javier\bibnamedelima García-Martín},
+           familyi={J\bibinitperiod\bibinitdelim G\bibinithyphendelim M\bibinitperiod},
+           given={Ernesto\bibnamedelima Vázquez-Sánchez},
+           giveni={E\bibinitperiod\bibinitdelim V\bibinithyphendelim S\bibinitperiod},
+           givenun=0,
+           suffix={Jaime\bibnamedelima Gómez-Gil},
+           suffixi={J\bibinitperiod\bibinitdelim G\bibinithyphendelim G\bibinitperiod},
+           suffixun=0}}%
+      }
+      \strng{namehash}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \strng{fullhash}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \strng{fullhashraw}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \strng{bibnamehash}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \strng{authorbibnamehash}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \strng{authornamehash}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \strng{authorfullhash}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \strng{authorfullhashraw}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sensors}
+      \field{title}{Non-Destructive Techniques Based on Eddy Current Testing}
+      \field{volume}{11}
+      \field{year}{2011}
+      \field{pages}{2525\bibrangedash 2565}
+      \range{pages}{41}
+    \endentry
+    \entry{libby}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fc9f382e7427be804894c011c8bf8c26}{%
+           family={Libby},
+           familyi={L\bibinitperiod},
+           given={Hugo\bibnamedelima L.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {John Wiley}%
+        {Sons, Inc}%
+      }
+      \strng{namehash}{fc9f382e7427be804894c011c8bf8c26}
+      \strng{fullhash}{fc9f382e7427be804894c011c8bf8c26}
+      \strng{fullhashraw}{fc9f382e7427be804894c011c8bf8c26}
+      \strng{bibnamehash}{fc9f382e7427be804894c011c8bf8c26}
+      \strng{authorbibnamehash}{fc9f382e7427be804894c011c8bf8c26}
+      \strng{authornamehash}{fc9f382e7427be804894c011c8bf8c26}
+      \strng{authorfullhash}{fc9f382e7427be804894c011c8bf8c26}
+      \strng{authorfullhashraw}{fc9f382e7427be804894c011c8bf8c26}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to electromagnetic non-destructive test methods}
+      \field{year}{1971}
+      \field{pages}{378}
+      \range{pages}{1}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{soni}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=46eb7b3261f9810766a868bb8aae1738}{%
+           family={Anil\bibnamedelimb Kumar\bibnamedelima Soni},
+           familyi={A\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={B.\bibnamedelimi Purnachandra\bibnamedelima Rao},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{46eb7b3261f9810766a868bb8aae1738}
+      \strng{fullhash}{46eb7b3261f9810766a868bb8aae1738}
+      \strng{fullhashraw}{46eb7b3261f9810766a868bb8aae1738}
+      \strng{bibnamehash}{46eb7b3261f9810766a868bb8aae1738}
+      \strng{authorbibnamehash}{46eb7b3261f9810766a868bb8aae1738}
+      \strng{authornamehash}{46eb7b3261f9810766a868bb8aae1738}
+      \strng{authorfullhash}{46eb7b3261f9810766a868bb8aae1738}
+      \strng{authorfullhashraw}{46eb7b3261f9810766a868bb8aae1738}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sensing and Imaging}
+      \field{number}{1}
+      \field{title}{Lock-in Amplifier Based Eddy Current Instrument for Detection of Sub-surface Defect in Stainless Steel Plates}
+      \field{volume}{19}
+      \field{year}{2018}
+      \field{pages}{32\bibrangedash 43}
+      \range{pages}{12}
+    \endentry
+    \entry{martin}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0de546c86a0ad398cdfc37c40d3aeeed}{%
+           family={Javier\bibnamedelima García-Martín},
+           familyi={J\bibinitperiod\bibinitdelim G\bibinithyphendelim M\bibinitperiod},
+           given={Ernesto\bibnamedelima Vázquez-Sánchez},
+           giveni={E\bibinitperiod\bibinitdelim V\bibinithyphendelim S\bibinitperiod},
+           givenun=0,
+           suffix={Jaime\bibnamedelima Gómez-Gil},
+           suffixi={J\bibinitperiod\bibinitdelim G\bibinithyphendelim G\bibinitperiod},
+           suffixun=0}}%
+      }
+      \strng{namehash}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \strng{fullhash}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \strng{fullhashraw}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \strng{bibnamehash}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \strng{authorbibnamehash}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \strng{authornamehash}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \strng{authorfullhash}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \strng{authorfullhashraw}{0de546c86a0ad398cdfc37c40d3aeeed}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sensors}
+      \field{title}{Non-Destructive Techniques Based on Eddy Current Testing}
+      \field{volume}{11}
+      \field{year}{2011}
+      \field{pages}{2525\bibrangedash 2565}
+      \range{pages}{41}
+    \endentry
+    \entry{libby}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fc9f382e7427be804894c011c8bf8c26}{%
+           family={Libby},
+           familyi={L\bibinitperiod},
+           given={Hugo\bibnamedelima L.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {John Wiley}%
+        {Sons, Inc}%
+      }
+      \strng{namehash}{fc9f382e7427be804894c011c8bf8c26}
+      \strng{fullhash}{fc9f382e7427be804894c011c8bf8c26}
+      \strng{fullhashraw}{fc9f382e7427be804894c011c8bf8c26}
+      \strng{bibnamehash}{fc9f382e7427be804894c011c8bf8c26}
+      \strng{authorbibnamehash}{fc9f382e7427be804894c011c8bf8c26}
+      \strng{authornamehash}{fc9f382e7427be804894c011c8bf8c26}
+      \strng{authorfullhash}{fc9f382e7427be804894c011c8bf8c26}
+      \strng{authorfullhashraw}{fc9f382e7427be804894c011c8bf8c26}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to electromagnetic non-destructive test methods}
+      \field{year}{1971}
+      \field{pages}{378}
+      \range{pages}{1}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
